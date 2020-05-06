@@ -11,3 +11,4 @@ RUN yum install -y ffmpeg ffmpeg-devel && \
     ffmpeg -version
 
 USER default
+ENTRYPOINT /bin/bash
