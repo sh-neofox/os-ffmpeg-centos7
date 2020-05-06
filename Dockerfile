@@ -10,4 +10,6 @@ RUN yum install -y epel-release && \
 RUN yum install -y ffmpeg ffmpeg-devel && \
     ffmpeg -version
 
-CMD /bin/bash
+ADD pod-daemon.sh /tmp/pod-daemon.sh
+RUN chmod +x /tmp/pod-daemon.sh
+CMD /tmp/pod-daemon.sh
