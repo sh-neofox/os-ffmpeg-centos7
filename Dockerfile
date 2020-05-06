@@ -10,6 +10,4 @@ RUN yum install -y epel-release && \
 RUN yum install -y ffmpeg ffmpeg-devel && \
     ffmpeg -version
 
-USER default
-ENTRYPOINT /bin/bash
-CMD echo Ready
+CMD /bin/bash
